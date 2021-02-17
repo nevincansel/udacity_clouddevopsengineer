@@ -1,0 +1,11 @@
+Description: >
+  Nevin Cansel - Istanbul/Turkey
+Resources:
+  VPC:  #This is just a references of what you create.
+      Type: AWS::EC2::VPC #what you want to create
+      Properties:
+        CidrBlock: 10.0.0.0/16
+        EnableDnsHostnames: True
+        Tags:
+        - Key: name
+          Value: my-first-vpc
