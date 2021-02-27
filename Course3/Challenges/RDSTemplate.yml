@@ -1,0 +1,45 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters: 
+  DBUsername:
+    NoEcho: 'true'
+    Description: Username for MySQL database access
+    Type: String
+    MinLength: '1'
+    MaxLength: '16'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+  DBPassword:
+    NoEcho: 'true'
+    Description: Password MySQL database access
+    Type: String
+    MinLength: '8'
+    MaxLength: '41'
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+
+Resources:
+  myDBSubnetGroup1:
+    Type: "AWS::RDS::DBSubnetGroup"
+    Properties:
+      DBSubnetGroupDescription: myDBSubnetGroup
+      SubnetIds:
+        - subnet-0932a365fc40a6ef3
+        - subnet-061d777864f5eb1ef
+  MyDB:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      AllocatedStorage: 20
+      AvailabilityZone: eu-central-1b
+      BackupRetentionPeriod: 1
+      DBInstanceClass: db.t3.small
+      DBName: MyDB
+      DBSubnetGroupName: !Ref myDBSubnetGroup1
+      DeletionProtection: true
+      Engine: mysql
+      EngineVersion: 5.7.31
+      MasterUsername: !Ref DBUsername
+      MasterUserPassword: !Ref DBPassword
+      Port: 3306
+      PubliclyAccessible: false
+      UseDefaultProcessorFeatures: true
+      VPCSecurityGroups: [sg-00867b0797f8515d7]

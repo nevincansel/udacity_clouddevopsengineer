@@ -1,0 +1,10 @@
+[
+    {
+        "ParameterKey": "DBUsername",
+        "ParameterValue": "usrcansel"
+    },
+    {
+        "ParameterKey": "DBPassword",
+        "ParameterValue": "CanselAws"
+    }
+]
