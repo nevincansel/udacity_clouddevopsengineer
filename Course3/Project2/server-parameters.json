@@ -1,11 +1,7 @@
 [
     {
       "ParameterKey": "EnvironmentName",
-      "ParameterValue": "UdacityProject2"
-    },
-    {
-      "ParameterKey": "myVPC",
-      "ParameterValue": "vpc-028755fea2eaba1ca"
+      "ParameterValue": "Udagram"
     },
     {
       "ParameterKey": "AMItoUse",
