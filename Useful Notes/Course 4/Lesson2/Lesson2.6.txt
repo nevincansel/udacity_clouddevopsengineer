@@ -1,0 +1,10 @@
+Technical Language	                                Value	            Translation
+Catch Compile Errors After Merge	                Reduce Cost	        Less developer time on issues from new developer code
+Catch Unit Test Failures	                        Avoid Cost	        Less bugs in production and less time in testing
+Detect Security Vulnerabilities	                    Avoid Cost	        Prevent embarrassing or costly security holes
+Automate Infrastructure Creation	                Avoid Cost	        Less human error, Faster deployments
+Automate Infrastructure Cleanup	                    Reduce Cost	        Less infrastructure costs from unused resources
+Faster and More Frequent Production Deployments	    Increase Revenue	New value-generating features released more quickly
+Deploy to Production Without Manual Checks	        Increase Revenue	Less time to market
+Automated Smoke Tests	                            Protect Revenue	    Reduced downtime from a deploy-related crash or major bug
+Automated Rollback Triggered by Job Failure	        Protect Revenue	    Quick undo to return production to working state

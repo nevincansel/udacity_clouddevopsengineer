@@ -1,0 +1,22 @@
+Blue Green Deployments
+
+The Router
+Router Option	    Description
+Load Balancer	    Instant switch for FE or BE, ideal router in most cases
+CDN	                Instant switch for front-end web apps.
+DNS	                A bit slow because of DNS propagation.
+
+Common Jobs
+Step	                                Description
+Integrate Code in a Build	            Compile and create artifact
+Run Tests	                            Run unit and/or integration tests
+Ensure Infrastructure is Present	    Create green infrastructure
+Provision the Environment	            Configure green instance, migrate DB, etc
+Deploy Artifact	                        Copy artifact files to instance
+Run Smoke Tests	                        Run a few tests that don't impact the prod server	
+Perform Rollback if Failure	            Rollback here is more of a cleanup of green
+Switch Router	                        Redirect traffic to new version
+Run Sanity Test	                        Run a few tests that don't impact the prod server
+Perform Rollback If Failure	            Rollback here is switching the router back to blue and cleaning up green
+Destroy Old Release Environment?	    Clean up blue env (optional)
+Notify The Team (Successful)	        Celebrate!
