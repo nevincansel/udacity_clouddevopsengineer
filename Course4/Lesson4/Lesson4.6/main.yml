@@ -1,0 +1,12 @@
+---
+- name: Exercise #1
+  hosts: localhost
+
+  roles:
+    - print
+
+#  To add ec2 instances, run the code below.
+#aws ec2 describe-instances \
+#--query 'Reservations[*].Instances[*].PrivateIpAddress' \
+#--filters "Name=tag:project,Values=udacity" \
+#--output text >> inventory

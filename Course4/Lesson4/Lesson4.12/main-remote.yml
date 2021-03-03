@@ -1,0 +1,13 @@
+---
+- name: Exercise for setting up a web server in an EC2
+  hosts: all
+  user: ubuntu
+  roles:
+    - setup
+
+
+#  To add ec2 instances, run the code below.
+#aws ec2 describe-instances \
+#--query 'Reservations[*].Instances[*].PrivateIpAddress' \
+#--filters "Name=tag:project,Values=udacity" \
+#--output text >> inventory
